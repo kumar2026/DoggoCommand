@@ -5,6 +5,7 @@ import math
 import signal
 
 # prevents quiting on pi when run through systemd
+# Prevents the script from terminating when the terminal or SSH session is closed.
 def handler(signum, frame):
     print("GOT singal", signum)
 signal.signal(signal.SIGHUP, handler)
